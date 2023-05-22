@@ -19,15 +19,18 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        bg="primary"
-        variant="dark"
+        variant="light"
         expand="lg"
         collapseOnSelect
-        className="py-0"
+        className="py-0 pt-1 border-bottom"
       >
         {/* <Container> */}
         <LinkContainer to="/">
-          <Navbar.Brand className="py-0 rounded">
+          <Navbar.Brand className="py-0 rounded border-right pr-5">
+            {/* <img 
+              src="./logo.png"
+              alt="bettermart"
+            /> */}
             {/* <img
               src="./logo.png"
               width="250"
@@ -35,16 +38,16 @@ const Header = () => {
               className="d-inline-block align-top"
               alt="bettermart logo"
             /> */}
-            <p>
-              <span className="text-warning">better</span>
-              <span className="text-dark">mart</span>
+            <p id="navBrand">
+              <span id="p1">better</span>
+              <span id="p2">mart</span>
             </p>
           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-between">
           <Route render={({ history }) => <SearchBox history={history} />} />
-          <Nav className="ml-auto">
+          <Nav className="navLinks">
             <LinkContainer to="/cart">
               <Nav.Link>
                 <i className="fas fa-shopping-cart"></i> Cart

@@ -58,3 +58,46 @@ h3 {
     font-size: 2.5vw;
   }
 }
+
+#navBrand {
+  text-transform: lowercase;
+  font-size: 35px;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Prompt', sans-serif;; */
+}
+#p1 {
+  color: #ffcf52;
+  font-weight: 400;
+}
+
+#p2 {
+  color: rgb(27, 25, 25);
+  font-weight: 900;
+}
+
+.searchBarForm {
+  width: 700px;
+}
+
+#searchBar {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.searchBarBtn {
+  border-radius: 10px;
+  border: #ffcf52 2px solid;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.sIcon {
+  font-size: 18px;
+  color: #ffcf52;
+}
+
+.navLinks {
+  font-size: 15px;
+}
