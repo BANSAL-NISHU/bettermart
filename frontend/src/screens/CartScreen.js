@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import shopping_bags from "../images/shopping_bags.svg";
 import { useDispatch, useSelector } from "react-redux";
 import {
   Row,
@@ -42,10 +43,19 @@ const CartScreen = ({ match, location, history }) => {
       <Col md={8}>
         <h1>My Cart</h1>
         {cartItems.length === 0 ? (
-          <Message>
-            You don't have any items in your cart{" "}
-            <Link to="/">Start Shopping</Link>
-          </Message>
+          <div>
+            <Message>You don't have any items in your cart.</Message>
+            <figure>
+              <img
+                className="shopping-bags"
+                src={shopping_bags}
+                alt="Empty Cart"
+              />
+            </figure>
+            <Button type="submit" variant="primary" href="/">
+              Start Shopping
+            </Button>
+          </div>
         ) : (
           <ListGroup variant="flush">
             {cartItems.map((item) => (
@@ -98,7 +108,7 @@ const CartScreen = ({ match, location, history }) => {
                 Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 items
               </h2>
-              $
+              ₹{" "}
               {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                 .toFixed(2)}
