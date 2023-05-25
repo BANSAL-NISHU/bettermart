@@ -64,7 +64,7 @@ h3 {
   font-size: 35px;
   padding-top: 10px;
   padding-left: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* font-family: 'Prompt', sans-serif;; */
 }
 #p1 {
@@ -84,18 +84,29 @@ h3 {
 #searchBar {
   width: 500px;
   border-radius: 10px;
+  background-color: #e4e4e6;
 }
 
 .searchBarBtn {
   border-radius: 10px;
   border: #ffcf52 2px solid;
   border-radius: 10px;
-  background-color: white;
+  background-color: #ffcf52;
+}
+
+.searchBarBtn:hover {
+  background-color: #ffcf52;
+  border-color: #ffcf52;
+}
+
+.searchBarBtn:focus {
+  background-color: #ffcf52;
+  border-color: #ffcf52;
 }
 
 .sIcon {
   font-size: 18px;
-  color: #ffcf52;
+  color: white;
 }
 
 .navLinks {
