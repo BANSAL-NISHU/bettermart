@@ -24,20 +24,8 @@ const Header = () => {
         collapseOnSelect
         className="py-0 pt-1 border-bottom"
       >
-        {/* <Container> */}
         <LinkContainer to="/">
           <Navbar.Brand className="py-0 rounded border-right pr-5">
-            {/* <img 
-              src="./logo.png"
-              alt="bettermart"
-            /> */}
-            {/* <img
-              src="./logo.png"
-              width="250"
-              height="135"
-              className="d-inline-block align-top"
-              alt="bettermart logo"
-            /> */}
             <p id="navBrand">
               <span id="p1">better</span>
               <span id="p2">mart</span>
@@ -45,7 +33,10 @@ const Header = () => {
           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-between">
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className="d-flex justify-content-between"
+        >
           <Route render={({ history }) => <SearchBox history={history} />} />
           <Nav className="navLinks">
             <LinkContainer to="/cart">
@@ -84,7 +75,6 @@ const Header = () => {
             )}
           </Nav>
         </Navbar.Collapse>
-        {/* </Container> */}
       </Navbar>
     </header>
   );
