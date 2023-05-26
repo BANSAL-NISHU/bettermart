@@ -71,6 +71,7 @@ const ProfileScreen = ({ location, history }) => {
               <Form.Control
                 type="name"
                 placeholder="Enter name"
+                id="form_control"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
@@ -81,6 +82,7 @@ const ProfileScreen = ({ location, history }) => {
               <Form.Control
                 type="email"
                 placeholder="Enter email"
+                id="form_control"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
@@ -91,6 +93,7 @@ const ProfileScreen = ({ location, history }) => {
               <Form.Control
                 type="password"
                 placeholder="Enter password"
+                id="form_control"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               ></Form.Control>
@@ -101,6 +104,7 @@ const ProfileScreen = ({ location, history }) => {
               <Form.Control
                 type="password"
                 placeholder="Confirm password"
+                id="form_control"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               ></Form.Control>
@@ -124,7 +128,7 @@ const ProfileScreen = ({ location, history }) => {
               <tr>
                 <th>ID</th>
                 <th>DATE</th>
-                <th>TOTAL</th>
+                <th>TOTAL PRICE</th>
                 <th>PAID</th>
                 <th>DELIVERED</th>
                 <th></th>
@@ -135,7 +139,7 @@ const ProfileScreen = ({ location, history }) => {
                 <tr key={order._id}>
                   <td>{order._id}</td>
                   <td>{order.createdAt.substring(0, 10)}</td>
-                  <td>{order.totalPrice}</td>
+                  <td>₹{order.totalPrice}</td>
                   <td>
                     {order.isPaid ? (
                       order.paidAt.substring(0, 10)

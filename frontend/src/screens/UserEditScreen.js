@@ -49,9 +49,14 @@ const UserEditScreen = ({ match, history }) => {
 
   return (
     <>
-      <Link to="/admin/userlist" className="btn btn-light my-3">
+      <Button
+        type="submit"
+        variant="primary"
+        href="/admin/userlist"
+        style={{ marginBottom: "10px" }}
+      >
         Go Back
-      </Link>
+      </Button>
       <FormContainer>
         <h1>Edit User</h1>
         {loadingUpdate && <Loader />}
@@ -67,6 +72,7 @@ const UserEditScreen = ({ match, history }) => {
               <Form.Control
                 type="name"
                 placeholder="Enter name"
+                id="form_control"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
@@ -77,6 +83,7 @@ const UserEditScreen = ({ match, history }) => {
               <Form.Control
                 type="email"
                 placeholder="Enter email"
+                id="form_control"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>

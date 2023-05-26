@@ -93,9 +93,14 @@ const ProductEditScreen = ({ match, history }) => {
 
   return (
     <>
-      <Link to="/admin/productlist" className="btn btn-light my-3">
+      <Button
+        type="submit"
+        variant="primary"
+        href="/admin/productlist"
+        style={{ marginBottom: "10px" }}
+      >
         Go Back
-      </Link>
+      </Button>
       <FormContainer>
         <h1>Edit Product</h1>
         {loadingUpdate && <Loader />}
@@ -111,6 +116,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type="name"
                 placeholder="Enter name"
+                id="form_control"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
@@ -120,7 +126,8 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Label>Price</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="Enter price"
+                placeholder="Enter price (in ₹)"
+                id="form_control"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
               ></Form.Control>
@@ -131,6 +138,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type="text"
                 placeholder="Enter image url"
+                id="form_control"
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
@@ -148,6 +156,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type="text"
                 placeholder="Enter brand"
+                id="form_control"
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
               ></Form.Control>
@@ -158,6 +167,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type="number"
                 placeholder="Enter countInStock"
+                id="form_control"
                 value={countInStock}
                 onChange={(e) => setCountInStock(e.target.value)}
               ></Form.Control>
@@ -168,6 +178,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type="text"
                 placeholder="Enter category"
+                id="form_control"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
               ></Form.Control>
@@ -178,6 +189,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type="text"
                 placeholder="Enter description"
+                id="form_control"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
