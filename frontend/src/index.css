@@ -116,6 +116,7 @@ h3 {
 
 .navLinks {
   font-size: 15px;
+  padding-right: 30px;
 }
 
 .btn-primary {
@@ -146,6 +147,13 @@ h3 {
 }
 
 .sign-up {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 450px;
+}
+
+.shipping {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
