@@ -41,7 +41,7 @@ const HomeScreen = ({ match }) => {
           </Button>
         </>
       )}
-      <h1>Latest Products</h1>
+      <h1>New Arrivals</h1>
       {loading ? (
         <Loader />
       ) : error ? (
