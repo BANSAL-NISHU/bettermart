@@ -87,14 +87,15 @@ const PlaceOrderScreen = ({ history }) => {
               {cart.cartItems.length === 0 ? (
                 <div>
                   <Message>Your cart is empty</Message>
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    href="/"
-                    style={{ marginTop: "20px" }}
-                  >
-                    Start Shopping
-                  </Button>
+                  <Link to="/">
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      style={{ marginTop: "20px" }}
+                    >
+                      Start Shopping
+                    </Button>
+                  </Link>
                 </div>
               ) : (
                 <ListGroup variant="flush">

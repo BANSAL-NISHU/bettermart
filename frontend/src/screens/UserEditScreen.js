@@ -49,14 +49,15 @@ const UserEditScreen = ({ match, history }) => {
 
   return (
     <>
-      <Button
-        type="submit"
-        variant="primary"
-        href="/admin/userlist"
-        style={{ marginBottom: "10px" }}
-      >
-        Go Back
-      </Button>
+      <Link to="/admin/userlist">
+        <Button
+          type="submit"
+          variant="primary"
+          style={{ marginBottom: "10px" }}
+        >
+          Go Back
+        </Button>
+      </Link>
       <FormContainer>
         <h1>Edit User</h1>
         {loadingUpdate && <Loader />}

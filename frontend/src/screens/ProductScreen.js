@@ -67,14 +67,15 @@ const ProductScreen = ({ history, match }) => {
 
   return (
     <>
-      <Button
-        type="submit"
-        variant="primary"
-        href="/"
-        style={{ marginBottom: "10px" }}
-      >
-        Go Back
-      </Button>
+      <Link to="/">
+        <Button
+          type="submit"
+          variant="primary"
+          style={{ marginBottom: "10px" }}
+        >
+          Go Back
+        </Button>
+      </Link>
       {loading ? (
         <Loader />
       ) : error ? (

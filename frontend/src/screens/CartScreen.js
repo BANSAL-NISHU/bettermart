@@ -52,9 +52,11 @@ const CartScreen = ({ match, location, history }) => {
                 alt="Empty Cart"
               />
             </figure>
-            <Button type="submit" variant="primary" href="/">
-              Start Shopping
-            </Button>
+            <Link to="/">
+              <Button type="submit" variant="primary">
+                Start Shopping
+              </Button>
+            </Link>
           </div>
         ) : (
           <ListGroup variant="flush">

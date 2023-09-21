@@ -31,14 +31,15 @@ const HomeScreen = ({ match }) => {
         <ProductCarousel />
       ) : (
         <>
-          <Button
-            type="submit"
-            variant="primary"
-            href="/"
-            style={{ marginBottom: "5px" }}
-          >
-            Go Back
-          </Button>
+          <Link to="/">
+            <Button
+              type="submit"
+              variant="primary"
+              style={{ marginBottom: "5px" }}
+            >
+              Go Back
+            </Button>
+          </Link>
         </>
       )}
       <h1>New Arrivals</h1>
