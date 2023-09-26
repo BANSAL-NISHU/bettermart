@@ -80,7 +80,7 @@ const LoginScreen = ({ location, history }) => {
 
       <div className="split left">
         <figure>
-          <img className="secure-login" src={secure_login} alt="Sign In" />
+          <img className="secure-login" src={secure_login} alt="Sign-In" />
         </figure>
       </div>
     </div>
