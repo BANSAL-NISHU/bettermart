@@ -93,14 +93,15 @@ const ProductEditScreen = ({ match, history }) => {
 
   return (
     <>
-      <Button
-        type="submit"
-        variant="primary"
-        href="/admin/productlist"
-        style={{ marginBottom: "10px" }}
-      >
-        Go Back
-      </Button>
+      <Link to="/admin/productlist">
+        <Button
+          type="submit"
+          variant="primary"
+          style={{ marginBottom: "10px" }}
+        >
+          Go Back
+        </Button>
+      </Link>
       <FormContainer>
         <h1>Edit Product</h1>
         {loadingUpdate && <Loader />}
